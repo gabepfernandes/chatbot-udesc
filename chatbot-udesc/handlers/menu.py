@@ -38,10 +38,40 @@ def menu_principal(idioma):
 def tratar_menu_principal(mensagem, idioma):
 
     if mensagem == "1":
-        return "Você escolheu Endereço dos Centros."
+        return {
+            "mensagem": (
+                "🏫 Escolha um Centro da UDESC:\n\n"
+                "1 - CCT (Joinville)\n"
+                "2 - CEART (Florianópolis)\n"
+                "3 - ESAG (Florianópolis)\n"
+                "4 - FAED (Florianópolis)\n"
+                "5 - CEFID (Florianópolis)\n"
+                "6 - CAV (Lages)\n"
+                "7 - CEPLAN (São Bento do Sul)\n"
+                "8 - CERES (Laguna)\n"
+                "9 - CEAVI (Ibirama)\n"
+                "10 - CEO (Chapecó e Pinhalzinho)\n"
+                "11 - CESFI (Balneário Camboriú)\n"
+                "12 - CESMO (Caçador)\n"
+                "13 - CEAD (Florianópolis)\n\n"
+                "Digite o número correspondente ao centro desejado."
+            ),
+            "estado": "menu_centros"
+        }
 
     elif mensagem == "2":
-        return "Você escolheu Sistemas UDESC."
+        return {
+            "mensagem": (
+                "Sistemas UDESC\n\n"
+                "1 - SIGA\n"
+                "2 - Moodle\n"
+                "3 - Office 365\n"
+                "4 - Biblioteca\n"
+                "5 - SAS\n\n"
+                "Digite o número do sistema desejado."
+            ),
+            "estado": "menu_sistemas"
+        }
 
     elif mensagem == "3":
         return "Você escolheu Como obter o ID."

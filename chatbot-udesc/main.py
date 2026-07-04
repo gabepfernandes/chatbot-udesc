@@ -10,6 +10,8 @@ from telegram.ext import (
 )
 from handlers.language import escolher_idioma
 from handlers.menu import menu_principal, tratar_menu_principal
+from data.centros import CENTROS
+from data.sistemas import SISTEMAS
 
 usuarios = {
     8966013007: {
@@ -89,10 +91,70 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         resposta = tratar_menu_principal(
             mensagem,
-            usuario['language']
+            usuario["language"]
         )
 
-        await update.message.reply_text(resposta)
+        usuario["state"] = resposta["estado"]
+
+        await update.message.reply_text(
+            resposta["mensagem"]
+        )
+
+    elif estado == "menu_centros":
+
+        if mensagem in CENTROS:
+
+            centro = CENTROS[mensagem]
+
+            resposta = (
+                f"{centro['nome']}\n\n"
+                f"Cidade: {centro['cidade']}\n"
+                f"Site: {centro['site']}"
+            )
+
+            await update.message.reply_text(resposta)
+
+            usuario["state"] = "menu_principal"
+
+            await update.message.reply_text(
+                menu_principal(usuario["language"])
+            )
+
+        else:
+            await update.message.reply_text(
+                "Centro inválido. Escolha um número da lista."
+            )
+
+    elif estado == "menu_sistemas":
+
+        if mensagem in SISTEMAS:
+
+            sistema = SISTEMAS[mensagem]
+
+            resposta = (
+                f"{sistema['nome']}\n\n"
+                f"Descrição:\n{sistema['descricao']}\n\n"
+                "Requisitos:\n"
+            )
+
+            for requisito in sistema["requisitos"]:
+                resposta += f"- {requisito}\n"
+
+            resposta += f"\nAcesso:\n{sistema['link']}"
+
+            await update.message.reply_text(resposta)
+
+            usuario["state"] = "menu_principal"
+
+            await update.message.reply_text(
+                menu_principal(usuario["language"])
+            )
+
+        else:
+
+            await update.message.reply_text(
+                "Sistema inválido. Escolha uma opção da lista."
+            )
 
     else:
 
