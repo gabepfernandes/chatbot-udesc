@@ -7,6 +7,9 @@ _pycache_/
 *.pyc
 *.pyo
 
+# Sessao autenticada do WhatsApp (nao compartilhar)
+*.sqlite3
+
 # Variaveis de ambiente / segredos (token do bot)
 .env
 
