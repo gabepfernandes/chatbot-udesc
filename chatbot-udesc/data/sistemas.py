@@ -1,32 +1,46 @@
 SISTEMAS = {
     "1": {
         "nome": "SIGA",
-        "descricao": "O SIGA é o sistema acadêmico da UDESC utilizado para realizar matrícula, consultar notas, frequência, histórico escolar e informações acadêmicas.",
-        "requisitos": "...",
-        "link": "https://siga.udesc.br/sigaSecurityG5/?pcaes=a205de9c60d3992e6296830743168a74"
+        "descricao": "O SIGA é o sistema acadêmico da UDESC. Nele o estudante consulta notas, faltas, matrícula, histórico escolar e informações acadêmicas.",
+        "requisitos": [
+            "Ter o ID UDESC (login institucional)",
+            "Senha cadastrada no primeiro acesso"
+        ],
+        "link": "https://siga.udesc.br"
     },
     "2": {
         "nome": "Moodle",
-        "descricao": "O Moodle é a plataforma onde os professores disponibilizam materiais, atividades e avaliações.",
-        "requisitos": "...",
+        "descricao": "O Moodle é a plataforma de ensino da UDESC. Os professores disponibilizam materiais das disciplinas, atividades e recebem a postagem de exercícios.",
+        "requisitos": [
+            "Ter o ID UDESC (login institucional)",
+            "Estar matriculado nas disciplinas"
+        ],
         "link": "https://www.moodle.udesc.br/login/index.php"
     },
     "3": {
         "nome": "Office 365",
-        "descricao": "A UDESC disponibiliza uma conta institucional Microsoft para alunos.",
-        "requisitos": "...",
-        "link": "office.udesc.br"
+        "descricao": "A UDESC disponibiliza uma conta institucional Microsoft para os alunos, com e-mail institucional e acesso aos aplicativos (Word, Excel e outros).",
+        "requisitos": [
+            "Ter o ID UDESC (login institucional)",
+            "Usar o e-mail institucional para entrar"
+        ],
+        "link": "https://office.udesc.br"
     },
     "4": {
         "nome": "Biblioteca",
-        "descricao": "...",
-        "requisitos": "...",
-        "link": "..."
+        "descricao": "A biblioteca online permite buscar livros e acessar os repositórios de TCCs, dissertações e teses da universidade.",
+        "requisitos": [
+            "Ter o ID UDESC para reservas e empréstimos",
+            "Não é necessário login para consultas simples"
+        ],
+        "link": "https://www.udesc.br/bu"
     },
     "5": {
         "nome": "SAS",
-        "descricao": "...",
-        "requisitos": "...",
-        "link": "..."
+        "descricao": "O SAS é usado para o agendamento de salas ou para verificar os agendamentos já realizados.",
+        "requisitos": [
+            "Ter o ID UDESC (login institucional)"
+        ],
+        "link": "https://www.udesc.br"
     }
 }

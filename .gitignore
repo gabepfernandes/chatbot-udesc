@@ -1,0 +1,15 @@
+# Ambiente virtual (equivalente ao node_modules)
+venv/
+.venv/
+
+# Arquivos temporarios gerados pelo Python
+_pycache_/
+*.pyc
+*.pyo
+
+# Variaveis de ambiente / segredos (token do bot)
+.env
+
+# Arquivos de IDE
+.vscode/
+.idea/
