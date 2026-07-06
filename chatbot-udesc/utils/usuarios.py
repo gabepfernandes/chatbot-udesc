@@ -1,6 +1,3 @@
-# Guarda o estado de cada usuário na memória.
-# A chave é o id do usuário e o valor tem o idioma e o estado atual da conversa.
-
 usuarios = {}
 
 

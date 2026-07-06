@@ -1,7 +1,3 @@
-# Lógica principal do chatbot.
-# Não depende do Telegram nem do WhatsApp: recebe uma mensagem de texto e
-# devolve uma lista de respostas (textos). Cada plataforma cuida de enviar.
-
 from handlers.language import escolher_idioma
 from handlers.menu import menu_principal, menu_centros, menu_sistemas
 from utils.usuarios import obter_usuario, reiniciar_usuario
@@ -16,7 +12,6 @@ def iniciar(user_id):
 
 
 def texto(idioma, chave):
-    # pega o texto no idioma escolhido; se não tiver, usa o português
     if idioma in TEXTOS and chave in TEXTOS[idioma]:
         return TEXTOS[idioma][chave]
     return TEXTOS["pt"][chave]
@@ -27,7 +22,6 @@ def responder(user_id, mensagem):
     mensagem = mensagem.strip()
     estado = usuario["state"]
 
-    # a qualquer momento o usuário pode digitar 0 para trocar o idioma
     if mensagem == "0" and estado != "escolhendo_idioma":
         usuario["language"] = None
         usuario["state"] = "escolhendo_idioma"

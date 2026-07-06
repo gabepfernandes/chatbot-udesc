@@ -1,6 +1,3 @@
-# Textos informativos dos menus, separados por idioma.
-# Quando um idioma não tiver tradução pronta, usamos o português.
-
 TEXTOS = {
     "pt": {
         "id_udesc": (
