@@ -177,19 +177,22 @@ def tratar_sistemas(usuario, mensagem):
     if mensagem in SISTEMAS:
         sistema = SISTEMAS[mensagem]
 
+        descricao = sistema["descricao"].get(idioma, sistema["descricao"]["pt"])
+        requisitos = sistema["requisitos"].get(idioma, sistema["requisitos"]["pt"])
+
         if idioma == "en":
-            resposta = f"{sistema['nome']}\n\nDescription:\n{sistema['descricao']}\n\nRequirements:\n"
-            for requisito in sistema["requisitos"]:
+            resposta = f"{sistema['nome']}\n\nDescription:\n{descricao}\n\nRequirements:\n"
+            for requisito in requisitos:
                 resposta += f"- {requisito}\n"
             resposta += f"\nAccess:\n{sistema['link']}"
         elif idioma == "es":
-            resposta = f"{sistema['nome']}\n\nDescripción:\n{sistema['descricao']}\n\nRequisitos:\n"
-            for requisito in sistema["requisitos"]:
+            resposta = f"{sistema['nome']}\n\nDescripción:\n{descricao}\n\nRequisitos:\n"
+            for requisito in requisitos:
                 resposta += f"- {requisito}\n"
             resposta += f"\nAcceso:\n{sistema['link']}"
         else:
-            resposta = f"{sistema['nome']}\n\nDescrição:\n{sistema['descricao']}\n\nRequisitos:\n"
-            for requisito in sistema["requisitos"]:
+            resposta = f"{sistema['nome']}\n\nDescrição:\n{descricao}\n\nRequisitos:\n"
+            for requisito in requisitos:
                 resposta += f"- {requisito}\n"
             resposta += f"\nAcesso:\n{sistema['link']}"
 
