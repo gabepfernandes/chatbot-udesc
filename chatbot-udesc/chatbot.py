@@ -17,6 +17,48 @@ def texto(idioma, chave):
     return TEXTOS["pt"][chave]
 
 
+def texto_cpf(idioma, usuario):
+    base = texto(idioma, "cpf")
+    centro_id = usuario.get("centro")
+
+    if centro_id and centro_id in CENTROS:
+        centro = CENTROS[centro_id]
+        complemento = texto(idioma, "cpf_endereco_com_centro").format(
+            centro=centro["nome"],
+            cidade=centro["cidade"]
+        )
+    else:
+        complemento = texto(idioma, "cpf_endereco_sem_centro")
+
+    return base + complemento
+
+
+def texto_tutoria(idioma, usuario):
+    intro = texto(idioma, "tutoria_intro")
+    centro_id = usuario.get("centro")
+
+    if not centro_id or centro_id not in CENTROS:
+        return intro + texto(idioma, "tutoria_sem_centro")
+
+    centro = CENTROS[centro_id]
+    tutoria = centro.get("tutoria")
+
+    if tutoria:
+        corpo = texto(idioma, "tutoria_com_dados").format(
+            centro=centro["nome"],
+            site=tutoria["site"],
+            email=tutoria["email"],
+            equipe=tutoria["equipe"]
+        )
+    else:
+        corpo = texto(idioma, "tutoria_sem_dados").format(
+            centro=centro["nome"],
+            site=centro["site"]
+        )
+
+    return intro + corpo
+
+
 def responder(user_id, mensagem):
     usuario = obter_usuario(user_id)
     mensagem = mensagem.strip()
@@ -76,10 +118,10 @@ def tratar_menu_principal(usuario, mensagem):
         return [texto(idioma, "id_udesc"), menu_principal(idioma)]
 
     elif mensagem == "4":
-        return [texto(idioma, "cpf"), menu_principal(idioma)]
+        return [texto_cpf(idioma, usuario), menu_principal(idioma)]
 
     elif mensagem == "5":
-        return [texto(idioma, "tutoria"), menu_principal(idioma)]
+        return [texto_tutoria(idioma, usuario), menu_principal(idioma)]
 
     elif mensagem == "6":
         return [texto(idioma, "soe"), menu_principal(idioma)]
@@ -95,6 +137,7 @@ def tratar_centros(usuario, mensagem):
 
     if mensagem in CENTROS:
         centro = CENTROS[mensagem]
+        usuario["centro"] = mensagem
 
         if idioma == "en":
             resposta = (

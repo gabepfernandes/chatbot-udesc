@@ -3,7 +3,12 @@ CENTROS = {
         "nome": "CCT - Centro de Ciências Tecnológicas",
         "cidade": "Joinville",
         "endereco": "Rua Paulo Malschitzki, 200 - Zona Industrial Norte, Joinville - SC",
-        "site": "https://www.udesc.br/cct"
+        "site": "https://www.udesc.br/cct",
+        "tutoria": {
+            "site": "https://www.udesc.br/cct/tutoriaacademica",
+            "equipe": "https://www.udesc.br/cct/tutoriaacademica/equipe",
+            "email": "tutoria.cct@udesc.br"
+        }
     },
     "2": {
         "nome": "CEART - Centro de Artes, Design e Moda",

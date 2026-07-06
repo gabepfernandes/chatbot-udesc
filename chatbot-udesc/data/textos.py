@@ -21,14 +21,42 @@ TEXTOS = {
             "da Receita Federal para validar o CPF, levando seu documento de identificação "
             "(passaporte) e o comprovante da solicitação."
         ),
-        "tutoria": (
+        "cpf_endereco_com_centro": (
+            "\n\n📍 Atendimento presencial em {cidade}:\n"
+            "Como você está no {centro} ({cidade}), agende o atendimento presencial na unidade "
+            "da Receita Federal mais próxima pelo localizador oficial:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial\n"
+            "A validação do CPF também pode ser feita em agências do Banco do Brasil, da Caixa "
+            "Econômica Federal e dos Correios em {cidade}."
+        ),
+        "cpf_endereco_sem_centro": (
+            "\n\n📍 Atendimento presencial:\n"
+            "Selecione primeiro o seu centro na opção 1 do menu para indicarmos a cidade de "
+            "atendimento. Você também pode localizar a unidade da Receita Federal mais próxima "
+            "pelo localizador oficial:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial"
+        ),
+        "tutoria_intro": (
             "🧑‍🏫 Equipe de Tutoria\n\n"
             "A equipe de tutoria ajuda os estudantes na adaptação e na vida acadêmica.\n\n"
+        ),
+        "tutoria_com_dados": (
+            "Tutoria do {centro}:\n"
+            "Site: {site}\n"
+            "E-mail: {email}\n"
+            "Equipe: {equipe}"
+        ),
+        "tutoria_sem_dados": (
+            "Tutoria do {centro}:\n"
+            "Consulte os contatos da tutoria no site do centro: {site}"
+        ),
+        "tutoria_sem_centro": (
+            "Selecione primeiro o seu centro na opção 1 do menu para mostrarmos os contatos "
+            "da equipe de tutoria correspondente.\n\n"
             "Tutoria do CCT (Joinville):\n"
             "Site: https://www.udesc.br/cct/tutoriaacademica\n"
             "E-mail: tutoria.cct@udesc.br\n"
-            "Equipe: https://www.udesc.br/cct/tutoriaacademica/equipe\n\n"
-            "Para os demais centros, consulte o site do centro escolhido no menu de Centros."
+            "Equipe: https://www.udesc.br/cct/tutoriaacademica/equipe"
         ),
         "soe": (
             "🤝 SOE - Serviço de Orientação ao Estudante\n\n"
@@ -69,14 +97,42 @@ TEXTOS = {
             "Important: the foreigner must go IN PERSON to a Federal Revenue office to "
             "validate the CPF, bringing an ID document (passport) and the request receipt."
         ),
-        "tutoria": (
+        "cpf_endereco_com_centro": (
+            "\n\n📍 In-person service in {cidade}:\n"
+            "Since you are at {centro} ({cidade}), schedule your in-person service at the "
+            "nearest Federal Revenue office using the official locator:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial\n"
+            "CPF validation can also be done at Banco do Brasil, Caixa Econômica Federal and "
+            "Correios branches in {cidade}."
+        ),
+        "cpf_endereco_sem_centro": (
+            "\n\n📍 In-person service:\n"
+            "First select your center in option 1 of the menu so we can indicate the service "
+            "city. You can also find the nearest Federal Revenue office using the official "
+            "locator:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial"
+        ),
+        "tutoria_intro": (
             "🧑‍🏫 Tutoring Team\n\n"
             "The tutoring team helps students with adaptation and academic life.\n\n"
+        ),
+        "tutoria_com_dados": (
+            "{centro} tutoring:\n"
+            "Site: {site}\n"
+            "E-mail: {email}\n"
+            "Team: {equipe}"
+        ),
+        "tutoria_sem_dados": (
+            "{centro} tutoring:\n"
+            "Check the tutoring contacts on the center's website: {site}"
+        ),
+        "tutoria_sem_centro": (
+            "First select your center in option 1 of the menu so we can show the tutoring "
+            "team contacts for it.\n\n"
             "CCT tutoring (Joinville):\n"
             "Site: https://www.udesc.br/cct/tutoriaacademica\n"
             "E-mail: tutoria.cct@udesc.br\n"
-            "Team: https://www.udesc.br/cct/tutoriaacademica/equipe\n\n"
-            "For other centers, check the center's website in the Centers menu."
+            "Team: https://www.udesc.br/cct/tutoriaacademica/equipe"
         ),
         "soe": (
             "🤝 SOE - Student Guidance Service\n\n"
@@ -118,14 +174,42 @@ TEXTOS = {
             "Receita Federal para validar el CPF, llevando su documento de identificación "
             "(pasaporte) y el comprobante de la solicitud."
         ),
-        "tutoria": (
+        "cpf_endereco_com_centro": (
+            "\n\n📍 Atención presencial en {cidade}:\n"
+            "Como estás en el {centro} ({cidade}), agenda la atención presencial en la unidad "
+            "de la Receita Federal más cercana mediante el localizador oficial:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial\n"
+            "La validación del CPF también puede hacerse en agencias del Banco do Brasil, de la "
+            "Caixa Econômica Federal y de Correios en {cidade}."
+        ),
+        "cpf_endereco_sem_centro": (
+            "\n\n📍 Atención presencial:\n"
+            "Selecciona primero tu centro en la opción 1 del menú para indicarte la ciudad de "
+            "atención. También puedes localizar la unidad de la Receita Federal más cercana "
+            "mediante el localizador oficial:\n"
+            "https://www.gov.br/receitafederal/pt-br/canais_atendimento/atendimento-presencial"
+        ),
+        "tutoria_intro": (
             "🧑‍🏫 Equipo de Tutoría\n\n"
             "El equipo de tutoría ayuda a los estudiantes en la adaptación y la vida académica.\n\n"
+        ),
+        "tutoria_com_dados": (
+            "Tutoría del {centro}:\n"
+            "Sitio: {site}\n"
+            "E-mail: {email}\n"
+            "Equipo: {equipe}"
+        ),
+        "tutoria_sem_dados": (
+            "Tutoría del {centro}:\n"
+            "Consulta los contactos de la tutoría en el sitio del centro: {site}"
+        ),
+        "tutoria_sem_centro": (
+            "Selecciona primero tu centro en la opción 1 del menú para mostrarte los contactos "
+            "del equipo de tutoría correspondiente.\n\n"
             "Tutoría del CCT (Joinville):\n"
             "Sitio: https://www.udesc.br/cct/tutoriaacademica\n"
             "E-mail: tutoria.cct@udesc.br\n"
-            "Equipo: https://www.udesc.br/cct/tutoriaacademica/equipe\n\n"
-            "Para los demás centros, consulta el sitio del centro elegido en el menú de Centros."
+            "Equipo: https://www.udesc.br/cct/tutoriaacademica/equipe"
         ),
         "soe": (
             "🤝 SOE - Servicio de Orientación al Estudiante\n\n"
