@@ -42,5 +42,13 @@ SISTEMAS = {
             "Ter o ID UDESC (login institucional)"
         ],
         "link": "https://www.udesc.br"
+    },
+    "6": {
+        "nome": "Site UDESC",
+        "descricao": "O site institucional da UDESC reúne informações sobre o Plano de Ensino (PPC) do curso, corpo docente (professores), notícias, editais e demais informações acadêmicas.",
+        "requisitos": [
+            "Não é necessário login para consultas gerais"
+        ],
+        "link": "https://www.udesc.br"
     }
 }
